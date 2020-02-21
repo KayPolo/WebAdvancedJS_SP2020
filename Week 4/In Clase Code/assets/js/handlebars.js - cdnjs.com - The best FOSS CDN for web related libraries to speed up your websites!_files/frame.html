@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)https://1fkb7yl9sw87.statuspage.io/embed/frame -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+<script type="text/javascript" src="./bc12d0ca7c"></script><script src="./nr-1167.min.js"></script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"bc12d0ca7c","applicationID":"1887052,5587075","transactionName":"IlgMRUFXWFhWEE5CQwBDF0IcXVlWVgZOV0UAWgc=","queueTime":0,"applicationTime":147,"agent":""}</script>
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"bc12d0ca7c",applicationID:"1887052"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1167.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Frame</title>
+  <style type="text/css">
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 12vh;
+      letter-spacing: .5vh;
+    }
+    * { box-sizing: border-box; }
+    a { color: inherit; }
+
+    .frame-wrapper {
+      display: flex;
+      background-color: #D98B3A;
+      color: #FFFFFF;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100vh;
+      border-radius: 3px;
+    }
+
+    .frame-icon {
+      flex: 1;
+      padding-top: 14vh;
+      text-align: center;
+
+      -moz-transform: scale(0.5, 0.5) translateY(-35vh);
+    }
+
+    .frame-close {
+      text-align: right;
+      min-width: 11vh;
+      flex: .7;
+      padding: 14vh 14vh 0 0;
+
+      -moz-transform: scale(0.5, 0.5) translateY(-35vh);
+    }
+
+    .frame-content {
+      flex: 6;
+      padding: 14vh 0 18vh 2vw;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .incident-title {
+      word-wrap: break-word;
+      margin: 0;
+      width: 72vw;
+      max-height: 30vh;
+      min-height: 16vh;
+      overflow: hidden;
+    }
+
+    .incident-title p {
+      font-size: 12vh;
+      letter-spacing: .5vh;
+      font-weight: 500;
+      margin: 0;
+    }
+
+    .incident-context {
+      margin-top: 5vh;
+      margin-bottom: 5vh;
+      font-size: 10vh;
+      letter-spacing: .5vh;
+      flex: 1;
+    }
+
+    .svg-button {
+      border: none;
+      background: none;
+      cursor: pointer;
+      padding: 1vh 0 2vh 0;
+    }
+
+    .frame-wrapper.mobile {
+      border-radius: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame-wrapper " id="frame-div">
+    <div class="frame-icon">
+    <svg width="15vh" height="15vh" viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="status-embed-svg-exclamation-icon">
+    <defs>
+        <path d="M13.4161506,4.41651608 L19.5838494,10.5844619 C20.3671375,11.3677813 20.3659678,12.6346542 19.5838494,13.4167144 L13.4161506,19.5839547 C12.6328625,20.3671845 11.3659678,20.3660149 10.5838494,19.5839547 L4.41615055,13.4167144 C3.63286252,12.6334846 3.6340322,11.3666116 4.41615055,10.5844619 L10.5838494,4.41651608 C11.3671375,3.63319669 12.6340322,3.63436641 13.4161506,4.41651608 Z M12,14 C12.552,14 13,13.552 13,13 L13,8 C13,7.448 12.552,7 12,7 C11.448,7 11,7.448 11,8 L11,13 C11,13.552 11.448,14 12,14 Z M12,17 C12.552,17 13,16.552 13,16 C13,15.448 12.552,15 12,15 C11.448,15 11,15.448 11,16 C11,16.552 11.448,17 12,17 Z" id="path-error"></path>
+    </defs>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-706.000000, -763.000000)">
+            <g id="global/error" transform="translate(702.500000, 759.500000)">
+                <mask id="mask-error" fill="white">
+                    <use xlink:href="#path-error"></use>
+                </mask>
+                <use id="Combined-Shape" fill="#42526E" fill-rule="evenodd" xlink:href="#path-error"></use>
+                <g id="Neutral-/-N000" mask="url(#mask-error)" fill="#FFFFFF" fill-rule="evenodd">
+                    <polygon points="0 24 24 24 24 0 0 0"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
+
+</div>
+
+<div class="frame-content">
+  <h1 class="incident-title">
+    <p>Status embed installed correctly</p>
+  </h1>
+
+  <div class="incident-item incident-context" id="incident-text-div">
+    This will be shown if an incident or maintenance is posted on your status page.
+  </div>
+
+  <div class="incident-item view-link">
+      <a class="page-link" href="https://status.cdnjs.com/?utm_source=embed" target="_blank">View latest updates</a>
+  </div>
+</div>
+
+<div class="frame-close">
+    <button class="svg-button" onclick="dismissFrame()">
+    <svg width="11vh" height="11vh" viewBox="0 0 13 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="status-embed-svg-close-icon">
+    <defs>
+        <path d="M10,8.8214887 L14.4107443,4.41074435 C14.7361813,4.08530744 15.2638187,4.08530744 15.5892557,4.41074435 C15.9146926,4.73618126 15.9146926,5.26381874 15.5892557,5.58925565 L11.1785113,10 L15.5892557,14.4107443 C15.9146926,14.7361813 15.9146926,15.2638187 15.5892557,15.5892557 C15.2638187,15.9146926 14.7361813,15.9146926 14.4107443,15.5892557 L10,11.1785113 L5.58925565,15.5892557 C5.26381874,15.9146926 4.73618126,15.9146926 4.41074435,15.5892557 C4.08530744,15.2638187 4.08530744,14.7361813 4.41074435,14.4107443 L8.8214887,10 L4.41074435,5.58925565 C4.08530744,5.26381874 4.08530744,4.73618126 4.41074435,4.41074435 C4.73618126,4.08530744 5.26381874,4.08530744 5.58925565,4.41074435 L10,8.8214887 Z" id="path-x"></path>
+    </defs>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-1027.000000, -941.000000)">
+            <g id="global/cross" transform="translate(1023.500000, 937.500000)">
+                <mask id="mask-x" fill="white">
+                    <use xlink:href="#path-x"></use>
+                </mask>
+                <use id="Combined-Shape" fill="#42526E" fill-rule="nonzero" xlink:href="#path-x"></use>
+                <g id="Dark-neutral-/-DN070" mask="url(#mask-x)" fill="#FFFFFF" fill-rule="evenodd">
+                    <polygon id="DN70" points="0 20 20 20 20 0 0 0"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
+
+  </button>
+</div>
+
+  </div>
+      <script type="text/javascript">
+        var displayItemCode = '';
+        var lsKeyDismissed = location.hostname + '_dismissed';
+        var unresolvedItems = [];
+
+        // check if we can use localStorage (some users may disable 3rd party cookies)
+        var localStorageAvailable = true
+        try {
+          localStorage.setItem('test', 'test');
+          localStorage.removeItem('test');
+        } catch(e) {
+          localStorageAvailable = false;
+        }
+
+        init = function() {
+          if (localStorageAvailable && localStorage.getItem(lsKeyDismissed) == null) {
+            localStorage.setItem(lsKeyDismissed, '[]')
+          }
+          clampTitle();
+          showNewItems(unresolvedItems)
+          var xhr = new XMLHttpRequest();
+          setInterval(pollForChanges, 60 * 1000, '/api/v2/status.json', xhr);
+        }
+
+        showNewItems = function(unresolvedItems) {
+          var dismissed = localStorageAvailable ? JSON.parse(localStorage.getItem(lsKeyDismissed)) : [];
+          var dismissedSet = new Set();
+          var nothingToShow = true;
+          dismissed.forEach(function(d) {
+            dismissedSet.add(d);
+          });
+          unresolvedItems.forEach(function(ui) {
+            if (!dismissedSet.has(ui)) {
+              showFrame();
+              nothingToShow = false;
+              return;
+            }
+          })
+          if (nothingToShow) {
+            dismissFrame();
+          }
+        }
+
+        updateIncidentTime = function(incident_updated_at) {
+          var incidentTextDiv = document.getElementById('incident-text-div')
+          incidentTextDiv.textContent = 'Last updated ' + timeDifference(new Date(incident_updated_at))
+        }
+
+        showFrame = function() {
+          parent.postMessage({action: 'showFrame'}, '*');
+        }
+
+        operateOnFrameJson = function(callback) {
+          var xhr = new XMLHttpRequest();
+          xhr.open('GET','/embed/frame.json');
+          xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+          xhr.send();
+          xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+              data = JSON.parse(xhr.response);
+              callback(data);
+            }
+          }
+        }
+
+        pollForChanges = function (url, xhr) {
+          xhr.open('GET', url);
+          xhr.send();
+          xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+              if (xhr.status != 304) {
+                operateOnFrameJson(function(data) {
+                  var frameDiv = document.getElementById('frame-div')
+
+                  // update frame styles in case we switched mode or the settings were updated
+                  frameDiv.style.backgroundColor = data.background_color
+                  frameDiv.style.color = data.text_color
+
+                  // update frame content
+                  frameDiv.innerHTML = data.frame_html
+                  if ("incident_last_updated_at" in data) {
+                    updateIncidentTime(data.incident_last_updated_at)
+                  }
+                  unresolvedItems = data.unresolved_items
+                  clampTitle()
+                  showNewItems(unresolvedItems)
+                })
+              }
+            }
+          }
+        }
+
+        dismissFrame = function() {
+          if (localStorageAvailable) {
+            localStorage.setItem(lsKeyDismissed, JSON.stringify(unresolvedItems));
+          } else {
+            console.log("You dismissed the flag, but third party cookies are disabled on your browser so the flag will come back the next time you visit the page.")
+          }
+
+          parent.postMessage({action: 'dismissFrame'}, '*');
+        }
+
+        clampTitle = function() {
+          var div = document.querySelector('.incident-title')
+          var p = document.querySelector('.incident-title p');
+          var divHeight = div.clientHeight;
+
+          while (p.clientHeight > divHeight) {
+            var text = p.innerHTML;
+
+            if (!/\s/.test(text)) {
+              // this case handles an infinite loop that occurred when the first word was too long to display in the banner
+              // this also occurred when the first word was the only word and was too long to display, now we simply
+              // truncate characters within the word itself.
+
+              if (text.length <= 10) {
+                // There's a certain point at which the zoom can make it so the text's height will never be within the div's height.
+                // This at least happens on Safari becasue the formatting is weird.
+                // This makes sure we don't get stuck in an infinite loop in this case.
+                return;
+              }
+
+              // replace the last character with ...
+              p.innerHTML = text.replace(/\w(\W*)$/, '...');
+            } else {
+              p.innerHTML = text.replace(/\W*\s(\S)*$/, '...'); // replace last word with ...
+            }
+          }
+        }
+
+        timeDifference = function(previous) {
+          var msPerMinute = 60 * 1000;
+          var msPerHour = msPerMinute * 60;
+          var msPerDay = msPerHour * 24;
+          var msPerMonth = msPerDay * 30;
+          var msPerYear = msPerDay * 365;
+          var now = new Date();
+          var elapsedMs = now - previous;
+
+          var elapsed = Math.round(elapsedMs/msPerMinute);
+          if (elapsed == 0 ) {
+            return '1 minute ago';
+          }
+          else if (elapsed < 60) {
+            return elapsed + ' minute' + plural(elapsed) + ' ago';
+          }
+
+          elapsed = Math.round(elapsedMs/msPerHour);
+          if (elapsed < 24) {
+            return elapsed + ' hour' + plural(elapsed) + ' ago';
+          }
+
+          elapsed = Math.round(elapsedMs/msPerDay);
+          if (elapsed < 31) {
+            return elapsed + ' day' + plural(elapsed) + ' ago';
+          }
+
+          elapsed = Math.round(elapsedMs/msPerMonth);
+          if (elapsed < 12) {
+            return elapsed + ' month' + plural(elapsed) + ' ago';
+          }
+
+          elapsed = Math.round(elapsedMs/msPerYear);
+          return elapsed + ' year' + plural(elapsed) + ' ago';
+        }
+
+        plural = function(x) {
+          return (x <= 1) ? '' : 's';
+        }
+
+        init();
+      </script>
+
+
+</body></html>
