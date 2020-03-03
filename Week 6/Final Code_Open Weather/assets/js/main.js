@@ -64,7 +64,7 @@ loadData = ()=> {
 /*4. Let's make an API call
     * Important, make sure that you have yourr API key*/
 
-//     $.getJSON("https://api.openweathermap.org/data/2.5/weather?q=" + city +"&appid=70f708ea0ae960d4c869108676d2a8f4",
+//     $.z("https://api.openweathermap.org/data/2.5/weather?q=" + city +"&appid=70f708ea0ae960d4c869108676d2a8f4",
 //      (data) =>{
 
 //         console.log(data);
