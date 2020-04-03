@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <style>
+        :root { --var-color-grey: #898989; }
+      body { 
+          margin:0; 
+          position:fixed; 
+          top:0; 
+          right:0; 
+          bottom:0; 
+          left:0; 
+          font-family: Helvetica; ; 
+          }
+  
+    text {
+      font-family: Helvetica;
+          color: var(--var-color-grey);
+    }
+    .axis path,
+    .axis line {
+      fill: none;
+      stroke: var(--var-color-grey);
+      shape-rendering: crispEdges;
+    }
+      .x.axis {font-size: 15px; }
+      .y.axis {font-size: 12px; }
+    </style>
+    <title>Class 2020</title>
+  </head>
+    <body>
+        <script>
+          const margin = {top: 40, right: 40, bottom: 40, left: 40}
+          const width = 800 - margin.left - margin.right
+          const height = 450 - margin.top - margin.bottom
+
+          const body = d3.select('body')
+          const svg = body.append('svg')
+                    .attr('width', width + margin.left + margin.right)
+                    .attr('height', height + margin.top + margin.bottom)
+          const g = svg.append('g')
+                    .attr('transform', `translate(${margin.left}, ${margin.top})`)
+
+          const btn = body.append('button')
+                      .html('Randomize')
+                      .on('click', ()=>{
+                        randomizeData()
+                        buildChart(dataset, g)
+                      })
+          
+          function randomizeData(){
+            dataset = dataset.map(a => {
+              a.value = Math.random()
+              return a
+            })
+          }
+          const xScale = d3.scaleBand()
+                        .range([0, width])
+                        .padding(0.4)
+          const yScale = d3.scaleLinear()
+                        .range([height, 0])
+          const colorScale = d3.scaleLinear()
+                        .range(['#ff0000','#fff','#00ff00'])
+          const formatPercent = d3.format('.0%')
+          const xAxis = d3.axisBottom(xScale).tickSize([]).tickPadding(10)
+          const yAxis = d3.axisLeft(yScale).tickFormat(formatPercent)
+
+          let dataset = [{"year":"2014", "value": .07},
+                {"year":"2015", "value": .13},
+                {"year":"2016", "value": .56},
+                {"year":"2017", "value": .95},
+                {"year":"2018", "value": .81}];
+
+          function buildChart(data, el){
+            el.selectAll('*').remove()
+
+            xScale.domain(data.map(d => d.year))
+            yScale.domain([0,1])
+            colorScale.domain([0, 0.5, 1])
+            
+              el.append('g')
+                .attr('class', 'x axis')
+                .attr('transform', `translate(0,${height})`)
+                .call(xAxis)
+            
+              el.append('g')
+              .attr('class', 'y axis')
+              .call(yAxis)
+            
+              el.selectAll('rect')
+              .data(data)
+              .enter().append('rect')
+              .attr('x', (d, i)=>{
+                return xScale(d.year)
+              })
+              .attr('width', xScale.bandwidth())
+              .attr('y', d => { return height })
+              .attr('height', 0)
+                .transition()
+                .duration(750)
+                .delay((d, i) => {
+                  return i * 150
+                })
+              .attr('y', (d) => yScale(d.value))
+              .attr('height', (d)=>{
+                return height - yScale(d.value) 
+              })
+              .attr('fill', function(d){
+                return colorScale(d.value)
+              })
+              .style('stroke-width', 3)
+              .style('stroke', '#000')
+          }
+          buildChart(dataset, g)
+        </script>
+    </body>
+</html>
