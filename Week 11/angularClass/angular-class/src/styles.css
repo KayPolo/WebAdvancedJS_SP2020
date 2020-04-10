@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+
+h3 {
+    color: indigo;
+}
+
+button{
+    width: 20%;
+    height: 20px;
+    background-color: lightcoral;
+}
+
+.show{
+    display:block;
+}
+
+.hide{
+    display: none;
+}
+
+.modal{
+    background-color: lightgoldenrodyellow;
+    width: 60%;
+    height: 100px;
+}

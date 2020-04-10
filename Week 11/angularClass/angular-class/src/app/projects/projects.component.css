@@ -1,0 +1,8 @@
+.projects{
+
+    width: calc(94% / 3);
+    height: calc(90vw / 3);
+    background-color: indianred;
+    float: left;
+    margin: 1%;
+}

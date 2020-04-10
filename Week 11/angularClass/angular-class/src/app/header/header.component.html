@@ -1,0 +1,17 @@
+
+
+<div class="main-header">
+
+    <ul>
+        <li *ngFor="let temp of menu">{{temp}}</li>
+    </ul>
+
+    <button (click) = 'showAbout()'> ABOUT</button>
+
+    <app-popup id="about-modal" class="hide">
+        <h1>About My Work</h1>
+        <p>I'm so cool!!!! Hire me!</p>
+    </app-popup>
+
+    
+</div>
